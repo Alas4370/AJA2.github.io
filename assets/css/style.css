@@ -133,6 +133,7 @@ body.scrolled #navbar {         /* Optional: Change background color on scroll *
 
 nav ul li a {
     text-decoration: none;
+    font-weight: 400;
     color: white;
 }
 
