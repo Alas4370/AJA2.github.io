@@ -153,3 +153,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // Check visibility on scroll
     window.addEventListener('scroll', checkVisibility);
 });
+
+// Navbar Toggle
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("navbar-toggle");
+    const navbarItems = document.getElementById("navbar-items");
+
+    toggleButton.addEventListener("click", function () {
+        navbarItems.classList.toggle("active"); // Toggle the active class
+    });
+});

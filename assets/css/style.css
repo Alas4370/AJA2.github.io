@@ -70,17 +70,7 @@ body.scrolled #navbar {         /* Optional: Change background color on scroll *
     display: flex;
     justify-content: space-between; /* Space between left, center, and right */
     align-items: center; /* Vertically center the items */
-}
-
-.navbar {
-    display: flex; /* Use flexbox for the navbar */
-    justify-content: space-between; /* Space between items */
-    align-items: center; /* Center items vertically */
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-    position: fixed; /* Make it fixed at the top */
-    width: 100%; /* Full width */
-    z-index: 1000; /* Make sure it's on top of other content */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-left {
@@ -536,9 +526,23 @@ footer {
     }
 
     .navbar-center {
-        width: 100%; /* Full width for center items */
-        flex-direction: row; /* Maintain row direction */
-        justify-content: center; /* Center items */
+        display: none; /* Hide the items by default */
+        flex-direction: column; /* Stack items vertically */
+        width: 100%; /* Full width */
+        position: absolute; /* Positioning for dropdown */
+        top: 60px; /* Position below the navbar */
+        left: 0; /* Align to the left */
+        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+        z-index: 999; /* Ensure it is above other content */
+    }
+
+    .navbar-toggle {
+        display: flex; /* Show toggle button */
+    }
+
+    /* Show items when toggled */
+    .navbar-center.active {
+        display: flex; /* Display items */
     }
 
     .navbar-center li {
