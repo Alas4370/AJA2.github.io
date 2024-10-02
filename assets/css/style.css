@@ -1,0 +1,440 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    line-height: 1.6;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-image: url('../images/bg.jpg'); /* Background image for the body */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Fix the background */
+    background-color: #f0f0f0; /* Fallback background color */
+    font-weight: 100;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    padding-left: 10px;
+    font-size: 2rem;
+    border-left: 5px solid #f03801; /* Change the color and thickness of the underline */
+    display: inline; /* Ensures the underline only affects the text */
+}
+
+h4 {
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+
+p {
+    font-size: 16px;
+}
+
+
+section {       /* Add spacing to the sections to avoid hiding content behind the navbar */
+    padding: 100px 200px; /* Adjust padding for sections below the header */
+    color: white; /* Text color for sections */
+    margin: 20px; /* Margin for sections */
+}
+
+.section-title {
+    text-align: left;
+    margin-bottom: 40px; /* Space below the title */
+}
+
+/* NAVBAR */
+body.scrolled #navbar {         /* Optional: Change background color on scroll */
+    background-color: rgba(51, 51, 51, 0.5); /* Semi-transparent background after scroll */
+    border-bottom: 1px solid #f03801; /* Add a color outline at the bottom */
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent; /* Transparent background */
+    padding: 10px 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Space between left, center, and right */
+    align-items: center; /* Vertically center the items */
+}
+
+.navbar-left {
+    margin-left: 20px;
+    display: flex;
+    align-items: center; /* Vertically align logo and name */
+}
+
+.navbar-left h1 {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0; /* Remove default margin on h1 */
+    line-height: 1; /* Ensure proper line height for alignment */
+}
+
+.navbar-logo {
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+    margin-right: 10px; /* Spacing between logo and name */
+}
+
+.navbar-center {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-center li {
+    margin: 0 20px; /* Space between menu items */
+}
+
+.navbar-center li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar-center li a:hover {
+    color: #f03801; /* Change text color on hover */
+}
+
+.navbar-right {
+    margin-right: 20px;
+}
+
+.navbar-right a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-right a:hover {
+    color: #f03801; /* Change icon color on hover */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li a.active {
+    color: #f03801; /* Active link color */
+}
+
+/* HERO SECTION */
+.btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 2px solid #f03801; /* Outline color */
+    color: #f03801;            /* Text color */
+    background-color: transparent; /* No background */
+    text-decoration: none;
+    border-radius: 4px;     /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #f03801; /* Background on hover */
+    color: #fff;            /* Text color on hover */
+}
+
+header#hero {
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Center content */
+    flex-direction: column;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    color: white; /* Text color for visibility */
+    text-align: center; /* Center text */
+}
+
+header#hero h1,
+header#hero p {
+    margin: 0; /* Remove default margins */
+}
+
+/* ABOUT SECTION */
+.about-content-details {
+    width: 65%; /* First column takes 65% of the container */
+    display: flex; /* Use Flexbox for layout */
+    flex-direction: column; /* Stack the two containers vertically */
+    flex-wrap: wrap;
+}
+
+.about-content{
+    display: flex;
+}
+
+.about-content-image {
+    width: 35%; /* 35% width for the right column */
+}
+
+.about-content-image img {
+    width: 100%;  /* Ensure the image takes up the full width of the container */
+    height: 100%; /* Ensure the image takes up the full height of the container */
+    object-fit: cover; /* Scale the image, keeping its aspect ratio and ensuring it covers the container */
+}
+
+.about-content-info {
+    padding-top: 100px;
+    display: flex; /* Use Flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping to the next line */ 
+}
+
+.about-content-interest {
+    padding-top: 100px;
+    display: flex; /* Use Flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping to the next line */ 
+}
+
+.about-content-info a {
+    color: #f03801;
+    text-decoration: none;
+}
+
+.about-content-interest a {
+    display: flex;
+    justify-content: center; /* Horizontally center the text */
+    align-items: center;     /* Vertically center the text */
+    width: 60px;
+    height: 60px;
+    border: solid 1px #f03801;
+    border-radius: 3px;
+    color: white;
+    margin: 0 5px;
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about-content-interest a:hover {
+    color: #f03801; /* Change icon color on hover */
+}
+
+.about-content-interest h3 {
+    padding-right: 30px;
+    display: flex;
+    justify-content: center; /* Horizontally center the text */
+    align-items: center;     /* Vertically center the text */
+}
+
+.about-half {
+    flex: 0 0 50%; /* Each column takes 50% of the width */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    padding: 0 10px; /* Optional: Add some padding to the columns */
+}
+
+.about-half ul li{
+    padding-top: 10px;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+/* SKILL SECTION */
+.progress {
+    margin-bottom: 20px; /* Space between progress bars */
+    position: relative; /* Position relative to use for absolute children */
+}
+
+.skill {
+    display: flex; /* Flexbox to align items */
+    justify-content: space-between; /* Space between skill name and value */
+    font-size: 12px;
+    color: white; /* Change text color if needed */
+}
+
+.val {
+    margin-left: 10px; /* Space between skill name and value */
+}
+
+.progress-bar-wrap {
+    border: 1px solid #f03801;
+    border-radius:  2px; /* Rounded corners */
+}
+
+.progress-bar {
+    border: 1px solid black;
+    background-color: #f03801;
+    height: 10px; /* Height of the progress bar */
+    border-radius: 2px; /* Rounded corners */
+}
+
+/* Style for the progress bars */
+.progress-bar {
+    transition: width 0.5s; /* Smooth transition for the progress bar */
+}
+
+/* Ensure the progress bars are full width */
+.progress-bar-wrap {
+    width: 100%; /* Full width for the progress wrap */
+}
+
+/* Optional: Add margin to columns */
+.skills-content {
+    display: flex; /* Use Flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping to the next line */ 
+}
+
+/* Optional: Add background and padding to columns */
+.skills-half {
+    flex: 0 0 50%; /* Each column takes 50% of the width */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    padding: 0 10px; /* Optional: Add some padding to the columns */
+}
+
+/* RESUME SECTION*/
+.resume-content {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.resume-title {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    padding-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #f03801;
+}
+
+.resume-title-content {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.resume-item {
+    position: relative; /* Establish a positioning context for the circle */
+    padding-left: 40px; /* Space for the circle and line */
+    margin-bottom: 20px; /* Space between items */
+}
+
+.resume-item ul {
+    padding-left: 20px;
+    margin-bottom: 16px;
+}
+
+.resume-item h4{
+    line-height: 18px;
+    font-size: 20px;
+    text-transform: uppercase;
+    justify-content: flex-start !important; /* Align items to the start (top) */
+    align-items: flex-start !important; /* Align items to the left */
+}
+
+.resume-item h5{
+    padding-left: 20px;
+}
+
+.resume-item::before {
+    content: ''; /* Required to create the pseudo-element */
+    position: absolute;
+    left: 0; /* Align to the left */
+    width: 16px; /* Circle diameter */
+    height: 16px; /* Circle diameter */
+    background-color: #f03801; /* Circle color */
+    border-radius: 50%; /* Make it circular */
+}
+
+.resume-item::after {
+    content: ''; /* Required to create the pseudo-element */
+    position: absolute;
+    left: 6.5px; /* Position line slightly to the right */
+    top: 10px; /* Start the line below the circle */
+    width: 2px; /* Line thickness */
+    height: calc(100% + 18px); /* Full height of the resume item */
+    background-color: #f03801; /* Line color */
+}
+
+footer {
+    display: flex; /* Center content */
+    flex-direction: column;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    color: white; /* Text color for visibility */
+    text-align: center; /* Center text */
+}
+
+/* CONTACT SECTION */
+.contact-wrap {
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background after scroll */
+    box-shadow: 0 4px 15px rgba(150, 150, 150, 0.5); /* Shadow effect */
+}
+
+.contact-wrap iframe {
+    padding-top: 20px;
+    width: 100%;
+    height: 300px;
+}
+
+.contact-item {
+    display: flex; /* Flexbox for horizontal alignment */
+    align-items: center; /* Vertically aligns the icon with the text */
+    gap: 10px; /* Add space between the icon and the text */
+    padding-bottom: 20px;
+}
+
+.contact-item i {
+    display: flex;
+    justify-content: center; /* Horizontally center the text */
+    align-items: center;     /* Vertically center the text */
+    border: solid 2px #f03801;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px; /* Adjust icon size if needed */
+    color: #f03801; /* Change icon color if needed */
+}
+
+/* Responsive Media Query */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .btn {
+        padding: 8px 15px;
+    }
+}
+
+/* Ensure navbar is responsive */
+@media (max-width: 768px) {
+    #navbar ul li {
+        margin: 0 10px;
+    }
+}
+
+/* Ensure navbar is responsive */
+@media (max-width: 768px) {
+    #navbar ul li {
+        margin: 0 10px;
+    }
+}

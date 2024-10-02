@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>AJA | Portfolio 2</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;500;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+</head>
+<body>
+    <nav id="navbar">
+        <div class="navbar-left">
+            <!-- Outline the logo -->
+            <svg width="0" height="0">
+                <filter id="outline">
+                    <feMorphology operator="dilate" radius="0.5" in="SourceAlpha" result="outline" />
+                    <feFlood flood-color="white" result="color" />
+                    <feComposite in2="outline" operator="in" />
+                    <feMerge>
+                        <feMergeNode />
+                        <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                </filter>
+            </svg>
+            <img src="assets/images/AJA.png" alt="Logo" class="navbar-logo outlined-image" style="filter: url(#outline);">
+            <h1>Arjohn Jude Alagao</h1>
+        </div>
+        <ul class="navbar-center">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="navbar-right">
+            <a href="https://github.com/Alas4370" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.facebook.com/arjohnjude.alagao" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/aj_alas4370/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/arjohn-jude-alagao" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <header id="hero">
+        <h1>Arjohn Jude</h1>
+        <p>Aspiring Web Developer</p>
+        <a href="#contact" class="btn">Contact Me</a>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container section-title">
+            <h2>About Me</h2>
+        </div>
+        <div class="container">
+            <p style="text-indent: 30px;">I'm an aspiring web developer currently focused on learning Laravel, a powerful PHP framework.
+                I have a passion for creating engaging and user-friendly websites, and I'm always exploring new technologies to enhance my skills in both front-end and back-end development.
+                I'm constantly learning new technologies and improving my skills in front-end and back-end development.
+                My goal is to turn my passion into a career and contribute to exciting projects in the tech industry.
+                In my spare time, I enjoy playing PC games, watching movies, and doing outdoor activities like driving my motorcycle.
+            </p>
+        </div>
+        <div class="container">
+            <div class="about-content">
+                <div class="about-content-details">
+                    <div class="about-content-info">
+                        <div class="about-half">
+                            <ul>
+                              <li><i></i> <strong>Birthday :</strong> <span>30 April 1997</span></li>
+                              <li><i></i> <strong>Website :</strong> <a target="_blank" href="https://arjohnjudealagao.w3spaces.com/index.html"><span>https://arjohnjudealagao.w3spaces.com</span></a></li>
+                              <li><i></i> <strong>Phone :</strong> <span>+639 12 856 4942</span></li>
+                              <li><i></i> <strong>City :</strong> <span>Iloilo City, PH</span></li>
+                            </ul>
+                        </div>
+                        <div class="about-half">
+                            <ul>
+                              <li><i></i> <strong>Age :</strong> <span>27</span></li>
+                              <li><i></i> <strong>Degree :</strong> <span>Bachelor</span></li>
+                              <li><i></i> <strong>Email :</strong> <span>arjohnjudealagao@gmail.com</span></li>
+                              <li><i></i> <strong>Freelance :</strong> <span>Available</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="about-content-interest">
+                        <h3>Interest : </h3>
+                        <a href="#" target="_blank" title="Laravel"><i class="fab fa-laravel"></i></a>
+                        <a href="#" target="_blank" title="PHP"><i class="fab fa-php"></i></a>
+                        <a href="#" target="_blank" title="HTML"><i class="fab fa-html5"></i></a>
+                        <a href="#" target="_blank" title="CSS"><i class="fab fa-css3-alt"></i></a>
+                        <a href="#" target="_blank" title="MySQL"><i class="fas fa-database"></i></a>
+                        <a href="#" target="_blank" title="git"><i class="fab fa-git-alt"></i></a>
+                    </div>
+                </div>
+                <div class="about-content-image">
+                  <svg width="0" height="0">
+                    <filter id="outline">
+                        <feMorphology operator="dilate" radius="10" in="SourceAlpha" result="outline" />
+                        <feFlood flood-color="white" result="color" />
+                        <feComposite in2="outline" operator="in" />
+                        <feMerge>
+                            <feMergeNode />
+                            <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                    </filter>
+                  </svg>
+                  <img src="assets/images/profile.png" alt="Logo" style="filter: url(#outline);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+
+        <!-- Section Title -->
+        <div class="container section-title">
+          <h2>Skills</h2>
+        </div>
+
+        <div class="container">
+          <div class="skills-content">
+            <div class="skills-half">
+              <div class="progress">
+                  <span class="skill"><span>HTML</span> <i class="val">75%</i></span>
+                  <div class="progress-bar-wrap">
+                      <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+              </div><!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"><span>CSS</span> <i class="val">50%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"><span>JavaScript</span> <i class="val">60%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+              <div class="progress">
+                <span class="skill"><span>MySQL</span> <i class="val">60%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+            </div>
+
+            <div class="skills-half">
+              <div class="progress">
+                <span class="skill"><span>PHP</span> <i class="val">75%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" style="width:75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"><span>Laravel Framework</span> <i class="val">50%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+
+              <div class="progress">
+                <span class="skill"><span>Photoshop</span> <i class="val">50%</i></span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div><!-- End Skills Item -->
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+      <div class="container section-title">
+        <h2>Resume</h2>
+      </div>
+      <div class="container resume-content">
+        <h3 class="resume-title">Work Experience</h3>
+        <div class="resume-title-content">
+          <div class="resume-item">
+            <h4>Delivery Rider</h4>
+            <p><em>Foodpanda</em></p>
+            <h5>Dec 2020 - Present</h5>
+            <ul>
+              <li>Deliver food to customers on time.</li>
+              <li>Ensure the food stays safe and fresh during delivery.</li>
+              <li>Follow delivery instructions provided by the app.</li>
+              <li>Maintain a professional and friendly attitude.</li>
+            </ul>
+          </div>
+          <div class="resume-item">
+            <h4>Former Probationary 2nd Lieutenant</h4>
+            <p><em>Armed Forces of the Philippines (Philippine Army)</em></p>
+            <h5>Feb 2022 - Aug 2022</h5>
+            <!-- <ul>
+              <li></li>
+              <li></li>
+            </ul> -->
+          </div>
+          <div class="resume-item
+          ">
+            <h4>Data Encoder</h4>
+            <p><em>Bancon Marketing Industries, Inc.</em></p>
+            <h5>Nov 2020 - Feb 2021</h5>
+            <ul>
+              <li>Enter customer orders into the system accurately.</li>
+              <li>Update stock levels in the inventory system.</li>
+              <li>Verify that order details are correct before processing.</li>
+              <li>Track incoming and outgoing stock items.</li>
+              <li>Maintain an organized and up-to-date inventory record.</li>
+              <li>Generate reports on orders and stock levels.</li>
+              <li>Ensure data entry is accurate and timely.</li>
+            </ul>
+          </div>
+          <div class="resume-item">
+            <h4>Junior Web Developer</h4>
+            <p><em>Maven Solution Inc.</em></p>
+            <h5>Jan 2020 - Jun 2020</h5>
+            <ul>
+              <li>Write and maintain clean, efficient code.</li>
+              <li>Assist in developing and testing web applications.</li>
+              <li>Collaborate with designers and senior developers on projects.</li>
+              <li>Implement front-end and back-end functionality.</li>
+              <li>Update and maintain website content and features.</li>
+            </ul>
+          </div>
+          <div class="resume-item">
+            <h4>SAP Data Encoder</h4>
+            <p><em>Corden Agro Industries, Inc.</em></p>
+            <h5>Nov 2018 - Jan 2020</h5>
+            <ul>
+              <li>Generate reports and dashboards from SAP data.</li>
+              <li>Ensure data accuracy and integrity in SAP databases.</li>
+              <li>Maintain and update data documentation and guidelines.</li>
+              <li>Troubleshoot and resolve SAP data entry issues.</li>
+              <li>Ensure data is encoded and stored accurately.</li>
+            </ul>
+          </div>
+          <div class="resume-item">
+            <h4>Imagery Analyst &amp; Quality Analyst</h4>
+            <p><em>Glimmertech</em></p>
+            <h5>Jan 2018 - Sep 2018</h5>
+            <ul>
+              <li>Analyze satellite or aerial images to gather information.</li>
+              <li>Use specialized software to enhance and evaluate imagery.</li>
+              <li>Ensure accuracy and quality of imagery data.</li>
+            </ul>
+          </div>
+          <div class="resume-item">
+            <h4>Data Encoder</h4>
+            <p><em>Corden Agro Industries, Inc.</em></p>
+            <h5>Jun 2017 - Dec 2017</h5>
+            <ul>
+              <li>Enter information about daily manufacturing outputs and processes.</li>
+              <li>Update and maintain data records.</li>
+              <li>Ensure all entered data is correct and matches physical production records.</li>
+              <li>Work closely with factory staff to gather accurate data and address any discrepancies.</li>
+            </ul>
+          </div>
+          <div class="resume-item">
+            <h4>On the Job Training / Internship</h4>
+            <p><em>National Bureau of Investigation</em></p>
+            <h5>Nov 2016 - Mar 2017</h5>
+            <ul>
+              <li>Data Entry.</li>
+              <li>Customer Service.</li>
+            </ul>
+          </div>
+          <div class="resume-item">
+            <h4>Web Developer/Programmer</h4>
+            <p><em>Research / Thesis</em></p>
+            <h5>Dec 2015 - Feb 2017</h5>
+            <ul>
+              <li>I am responsible for coding the system on our thesis.</li>
+            </ul>
+          </div>
+        </div>
+
+        
+        <h3 class="resume-title">Education</h3>
+        <div class="resume-title-content">
+          <div class="resume-item">
+            <h4>Tertiary - Bachelor of Science in Information Systems</h4>
+            <p><em>Iloilo Science and Technology University, Burgos St., La Paz, Iloilo City</em></p>
+            <h5>2013 - 2017</h5>
+            <ul>
+              <li>Academic Excellence / Merit Award</li>
+              <li>Leadership Award</li>
+            </ul>
+          </div>
+          <div class="resume-item">
+            <h4>Secondary - Regular Class</h4>
+            <p><em>Iloilo National High School, Luna St., La Paz, Iloilo City</em></p>
+            <h5>2009 - 2013</h5>
+            <ul>
+              <li>Academic Award - February 2011</li>
+              <li>Academic Award - September 2010</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container section-title">
+        <h2>Contact</h2>
+      </div>
+      <div class="contact-wrap">
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h3>Address</h3>
+            <p>Iloilo City, Philippines, PH 5000</p>
+          </div>
+        </div>
+        <div class="contact-item ">
+          <i class="fas fa-phone"></i>
+          <div>
+            <h3>Call Me</h3>
+            <p>+639 128564942</p>
+          </div>
+        </div>
+        <div class="contact-item d-flex aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <h3>Email</h3>
+            <p>arjohnjudealagao@gmail.com</p>
+          </div>
+        </div>
+        <iframe src="https://maps.google.com/maps?q=iloilo%20city&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Arjohn Jude Alagao. All Rights Reserved.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
