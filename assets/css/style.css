@@ -73,7 +73,7 @@ body.scrolled #navbar {         /* Optional: Change background color on scroll *
 }
 
 .navbar-toggle {
-    display: none; /* Hidden by default */
+    display: none !important; /* Hidden by default */
     flex-direction: column;
     cursor: pointer; /* Change cursor to pointer */
 }
