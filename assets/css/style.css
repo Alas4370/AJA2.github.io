@@ -186,6 +186,8 @@ header#hero p {
 }
 
 .about-content-image {
+    display: inline-block; /* To ensure the image stays in its own block */
+    overflow: hidden; /* Prevent any overflow from the animation */
     width: 35%; /* 35% width for the right column */
 }
 
@@ -193,6 +195,35 @@ header#hero p {
     width: 100%;  /* Ensure the image takes up the full width of the container */
     height: 100%; /* Ensure the image takes up the full height of the container */
     object-fit: cover; /* Scale the image, keeping its aspect ratio and ensuring it covers the container */
+}
+
+.sticker {
+    filter: url(#outline); /* Apply the outline filter */
+    animation: shake 0.5s infinite;
+    animation: bouncce is infinite;
+}
+
+.sticker {
+    filter: url(#outline); /* Apply the outline filter */
+    animation: shakeBounceRotate 1s infinite; /* Add the combined animation */
+}
+
+@keyframes shakeBounceRotate {
+    0% {
+        transform: translateY(0) rotate(0deg); /* Original position */
+    }
+    25% {
+        transform: translateY(-5px) rotate(-2deg); /* Move up and rotate slightly left */
+    }
+    50% {
+        transform: translateY(-5px) rotate(2deg); /* Move down and rotate slightly right */
+    }
+    75% {
+        transform: translateY(-5px) rotate(-2deg); /* Move up and rotate slightly left */
+    }
+    100% {
+        transform: translateY(0) rotate(0deg); /* Return to original position */
+    }
 }
 
 .about-content-info {
@@ -296,10 +327,32 @@ header#hero p {
 }
 
 /* Optional: Add background and padding to columns */
-.skills-half {
+.skills-half-left {
+    opacity: 0; /* Start with the item invisible */
+    transform: translateX(-50px); /* Start position for the slide-in effect */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition for opacity and transform */
     flex: 0 0 50%; /* Each column takes 50% of the width */
     box-sizing: border-box; /* Ensure padding and border are included in the width */
     padding: 0 10px; /* Optional: Add some padding to the columns */
+}
+
+.skills-half-right {
+    opacity: 0; /* Start with the item invisible */
+    transform: translateX(50px); /* Start position for the slide-in effect */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition for opacity and transform */
+    flex: 0 0 50%; /* Each column takes 50% of the width */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    padding: 0 10px; /* Optional: Add some padding to the columns */
+}
+
+.skills-half-left.visible {
+    opacity: 1; /* Make the item visible */
+    transform: translateX(0); /* Move to its original position */
+}
+
+.skills-half-right.visible {
+    opacity: 1; /* Make the item visible */
+    transform: translateX(0); /* Move to its original position */
 }
 
 /* RESUME SECTION*/
@@ -330,9 +383,17 @@ header#hero p {
 }
 
 .resume-item {
+    opacity: 0; /* Start with the item invisible */
+    transform: translateX(50px); /* Start position for the slide-in effect */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition for opacity and transform */
     position: relative; /* Establish a positioning context for the circle */
     padding-left: 40px; /* Space for the circle and line */
     margin-bottom: 20px; /* Space between items */
+}
+
+.resume-item.visible {
+    opacity: 1; /* Make the item visible */
+    transform: translateX(0); /* Move to its original position */
 }
 
 .resume-item ul {
@@ -360,8 +421,10 @@ header#hero p {
     height: 16px; /* Circle diameter */
     background-color: #f03801; /* Circle color */
     border-radius: 50%; /* Make it circular */
+    top: 0; /* Position at the top of the resume item */
 }
 
+/* Pseudo-element styles for the line */
 .resume-item::after {
     content: ''; /* Required to create the pseudo-element */
     position: absolute;
@@ -370,6 +433,16 @@ header#hero p {
     width: 2px; /* Line thickness */
     height: calc(100% + 18px); /* Full height of the resume item */
     background-color: #f03801; /* Line color */
+}
+
+.resume-item::before,
+.resume-item::after {
+    transition: none !important; /* Ensure no transition occurs */
+}
+
+/* Optional: Adjust the line position if needed */
+.resume-item:last-child::after {
+    height: calc(100% + 10px); /* Prevents extending below the last item */
 }
 
 .resume-job-desc span {
