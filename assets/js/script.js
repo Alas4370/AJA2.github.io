@@ -155,11 +155,12 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Navbar Toggle
-document.addEventListener("DOMContentLoaded", function () {
-    const toggleButton = document.getElementById("navbar-toggle");
-    const navbarItems = document.getElementById("navbar-items");
+const toggleButton = document.querySelector('.navbar-toggle');
+const navbarCenter = document.querySelector('.navbar-center');
+const navbarRight = document.querySelector('.navbar-right');
 
-    toggleButton.addEventListener("click", function () {
-        navbarItems.classList.toggle("active"); // Toggle the active class
-    });
+toggleButton.addEventListener('click', () => {
+    navbarCenter.classList.toggle('show'); // Toggle visibility of navbar-center
+    navbarRight.classList.toggle('show'); // Toggle visibility of navbar-right
 });
+
