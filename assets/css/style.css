@@ -494,27 +494,104 @@ footer {
     text-align: center; /* Center text */
 }
 
-/* Responsive Media Query */
+/* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
+    body {
+        padding: 0 10px; /* Reduce padding for smaller screens */
+    }
+
     h1 {
-        font-size: 3rem;
+        font-size: 2.5rem; /* Smaller h1 font size */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Smaller h2 font size */
+    }
+
+    section {
+        padding: 50px 20px; /* Adjust padding for sections */
+    }
+
+    .navbar-left h1 {
+        font-size: 1.2rem; /* Smaller logo text */
+    }
+
+    .navbar-center li {
+        margin: 0 10px; /* Less space between menu items */
+    }
+
+    .navbar-center li a {
+        font-size: 1rem; /* Smaller menu item font size */
     }
 
     .btn {
-        padding: 8px 15px;
+        padding: 8px 16px; /* Smaller button padding */
+        font-size: 1rem; /* Smaller button font size */
+    }
+
+    header#hero {
+        height: 60vh; /* Reduced height for mobile */
+    }
+
+    .about-content {
+        flex-direction: column; /* Stack columns vertically */
+    }
+
+    .about-content-image {
+        width: 100%; /* Full width for the image on mobile */
+    }
+
+    .about-content-details {
+        width: 100%; /* Full width for text details */
+    }
+
+    .skills-half-left,
+    .skills-half-right {
+        flex: 0 0 100%; /* Full width for skills columns */
+    }
+
+    .resume-title-content,
+    .resume-content {
+        padding: 0 20px; /* Reduce padding for resume sections */
+    }
+
+    .resume-item {
+        padding-left: 20px; /* Space for the circle and line */
+    }
+
+    .contact-item {
+        flex-direction: column; /* Stack contact items vertically */
+        align-items: flex-start; /* Align text to the start */
+    }
+
+    .contact-item i {
+        width: 40px; /* Adjust icon size */
+        height: 40px; /* Adjust icon size */
+        font-size: 20px; /* Adjust icon size */
+    }
+
+    /* Adjust footer for mobile */
+    footer {
+        padding: 20px 10px; /* Add padding for footer */
     }
 }
 
-/* Ensure navbar is responsive */
-@media (max-width: 768px) {
-    #navbar ul li {
-        margin: 0 10px;
+/* Additional Media Queries for smaller devices */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem; /* Further decrease h1 font size */
     }
-}
 
-/* Ensure navbar is responsive */
-@media (max-width: 768px) {
-    #navbar ul li {
-        margin: 0 10px;
+    h2 {
+        font-size: 1.2rem; /* Further decrease h2 font size */
+    }
+
+    .btn {
+        padding: 6px 12px; /* Smaller button padding for extra small screens */
+        font-size: 0.9rem; /* Smaller button font size */
+    }
+
+    .navbar-center li a {
+        font-size: 0.9rem; /* Smaller menu item font size */
     }
 }
