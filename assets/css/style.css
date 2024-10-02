@@ -371,13 +371,11 @@ header#hero p {
     background-color: #f03801; /* Line color */
 }
 
-footer {
-    display: flex; /* Center content */
-    flex-direction: column;
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    color: white; /* Text color for visibility */
-    text-align: center; /* Center text */
+.resume-job-desc span {
+    color: #f03801;
+    font-size: 12px;
+    border: solid 1px #f03801;
+    padding: 5px;
 }
 
 /* CONTACT SECTION */
@@ -410,6 +408,16 @@ footer {
     border-radius: 50%;
     font-size: 24px; /* Adjust icon size if needed */
     color: #f03801; /* Change icon color if needed */
+}
+
+/* FOOTER */
+footer {
+    display: flex; /* Center content */
+    flex-direction: column;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    color: white; /* Text color for visibility */
+    text-align: center; /* Center text */
 }
 
 /* Responsive Media Query */
