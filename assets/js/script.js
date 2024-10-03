@@ -89,61 +89,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Some transition effects when scrolling
 document.addEventListener('DOMContentLoaded', function () {
-    const resumeItems = document.querySelectorAll('.resume-item');
+    const elementsToCheck = [
+        document.querySelectorAll('.section-title'),
+        document.querySelectorAll('#about .container p'),
+        document.querySelectorAll('.resume-item'),
+        document.querySelectorAll('.skills-half-left'),
+        document.querySelectorAll('.skills-half-right'),
+        document.querySelectorAll('.contact-wrap')
+    ];
 
     function checkVisibility() {
         const triggerBottom = window.innerHeight / 5 * 4; // Adjusts when to trigger the animation
-        resumeItems.forEach(item => {
-            const boxTop = item.getBoundingClientRect().top;
-            if (boxTop < triggerBottom) {
-                item.classList.add('visible');
-            } else {
-                item.classList.remove('visible');
-            }
-        });
-    }
-
-    // Initial check
-    checkVisibility();
-
-    // Check visibility on scroll
-    window.addEventListener('scroll', checkVisibility);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    const skillsHalfLeft = document.querySelectorAll('.skills-half-left');
-
-    function checkVisibility() {
-        const triggerBottom = window.innerHeight / 5 * 4; // Adjusts when to trigger the animation
-        skillsHalfLeft.forEach(item => {
-            const boxTop = item.getBoundingClientRect().top;
-            if (boxTop < triggerBottom) {
-                item.classList.add('visible');
-            } else {
-                item.classList.remove('visible');
-            }
-        });
-    }
-
-    // Initial check
-    checkVisibility();
-
-    // Check visibility on scroll
-    window.addEventListener('scroll', checkVisibility);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    const skillsHalfRight = document.querySelectorAll('.skills-half-right');
-
-    function checkVisibility() {
-        const triggerBottom = window.innerHeight / 5 * 4; // Adjusts when to trigger the animation
-        skillsHalfRight.forEach(item => {
-            const boxTop = item.getBoundingClientRect().top;
-            if (boxTop < triggerBottom) {
-                item.classList.add('visible');
-            } else {
-                item.classList.remove('visible');
-            }
+        elementsToCheck.forEach(group => {
+            group.forEach(item => {
+                const boxTop = item.getBoundingClientRect().top;
+                if (boxTop < triggerBottom) {
+                    item.classList.add('visible');
+                } else {
+                    item.classList.remove('visible');
+                }
+            });
         });
     }
 

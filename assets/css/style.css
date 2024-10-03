@@ -49,8 +49,16 @@ section {       /* Add spacing to the sections to avoid hiding content behind th
 }
 
 .section-title {
+    opacity: 0; /* Start with the item invisible */
+    transform: translateX(-50px); /* Start position for the slide-in effect */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition for opacity and transform */
     text-align: left;
     margin-bottom: 40px; /* Space below the title */
+}
+
+.section-title.visible {
+    opacity: 1; /* Make the item visible */
+    transform: translateX(0); /* Move to its original position */
 }
 
 /* NAVBAR */
@@ -189,6 +197,17 @@ header#hero p {
 }
 
 /* ABOUT SECTION */
+#about .container p {
+    opacity: 0; /* Start with the item invisible */
+    transform: translateY(20px); /* Start position for the slide-in effect */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition for opacity and transform */
+}
+
+#about .container p.visible {
+    opacity: 1; /* Make the item visible */
+    transform: translateY(0); /* Move to its original position */
+}
+
 .about-content-details {
     width: 65%; /* First column takes 65% of the container */
     display: flex; /* Use Flexbox for layout */
@@ -485,9 +504,17 @@ header#hero p {
 
 /* CONTACT SECTION */
 .contact-wrap {
+    opacity: 0; /* Start with the item invisible */
+    transform: translateY(50px); /* Start position for the slide-in effect */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition for opacity and transform */
     padding: 30px;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background after scroll */
     box-shadow: 0 4px 15px rgba(150, 150, 150, 0.5); /* Shadow effect */
+}
+
+.contact-wrap.visible {
+    opacity: 1; /* Make the item visible */
+    transform: translateY(0); /* Move to its original position */
 }
 
 .contact-wrap iframe {
