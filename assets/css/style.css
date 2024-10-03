@@ -94,6 +94,7 @@ body.scrolled #navbar {         /* Optional: Change background color on scroll *
 
 .navbar-left {
     margin-left: 20px;
+    flex: 1;
     display: flex;
     align-items: center; /* Vertically align logo and name */
 }
@@ -113,12 +114,15 @@ body.scrolled #navbar {         /* Optional: Change background color on scroll *
 
 .navbar-center {
     display: flex; /* Use flexbox */
-    flex-wrap: wrap; /* Allow items to wrap */
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
+}
+.navbar-center ul {
+    display: flex; /* Make the list items horizontal */
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
 }
 
 .navbar-center li {
@@ -139,6 +143,9 @@ body.scrolled #navbar {         /* Optional: Change background color on scroll *
 }
 
 .navbar-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
     margin-right: 20px;
 }
 
