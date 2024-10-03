@@ -164,3 +164,10 @@ toggleButton.addEventListener('click', () => {
     navbarRight.classList.toggle('show'); // Toggle visibility of navbar-right
 });
 
+// Download PDF Resume
+function downloadPDF() {
+    const link = document.createElement('a');
+    link.href = 'https://alas4370.github.io/AJA.github.io/assets/pdf/AJA_Resume.pdf'; // Replace with the actual path to your PDF file
+    link.download = 'AJA_Resume.pdf'; // Replace with the desired file name for download
+    link.click();
+  }
