@@ -323,11 +323,6 @@ header#hero p {
 }
 
 /* SKILL SECTION */
-.progress {
-    margin-bottom: 20px; /* Space between progress bars */
-    position: relative; /* Position relative to use for absolute children */
-}
-
 .skill {
     display: flex; /* Flexbox to align items */
     justify-content: space-between; /* Space between skill name and value */
@@ -337,6 +332,11 @@ header#hero p {
 
 .val {
     margin-left: 10px; /* Space between skill name and value */
+}
+
+.progress {
+    margin-bottom: 20px; /* Space between progress bars */
+    position: relative; /* Position relative to use for absolute children */
 }
 
 .progress-bar-wrap {
@@ -349,6 +349,7 @@ header#hero p {
     background-color: #f03801;
     height: 10px; /* Height of the progress bar */
     border-radius: 2px; /* Rounded corners */
+    width: 0; /* Start with width 0 to allow animation */
 }
 
 /* Style for the progress bars */
@@ -369,32 +370,32 @@ header#hero p {
 
 /* Optional: Add background and padding to columns */
 .skills-half-left {
-    opacity: 0; /* Start with the item invisible */
-    transform: translateX(-50px); /* Start position for the slide-in effect */
-    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition for opacity and transform */
+    /* opacity: 0; Start with the item invisible
+    transform: translateX(-50px); Start position for the slide-in effect
+    transition: opacity 1s ease-out, transform 1s ease-out; Smooth transition for opacity and transform */
     flex: 0 0 50%; /* Each column takes 50% of the width */
     box-sizing: border-box; /* Ensure padding and border are included in the width */
     padding: 0 10px; /* Optional: Add some padding to the columns */
 }
 
 .skills-half-right {
-    opacity: 0; /* Start with the item invisible */
-    transform: translateX(50px); /* Start position for the slide-in effect */
-    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition for opacity and transform */
+    /* opacity: 0; Start with the item invisible
+    transform: translateX(50px); Start position for the slide-in effect
+    transition: opacity 1s ease-out, transform 1s ease-out; Smooth transition for opacity and transform */
     flex: 0 0 50%; /* Each column takes 50% of the width */
     box-sizing: border-box; /* Ensure padding and border are included in the width */
     padding: 0 10px; /* Optional: Add some padding to the columns */
 }
 
-.skills-half-left.visible {
-    opacity: 1; /* Make the item visible */
-    transform: translateX(0); /* Move to its original position */
-}
+/* .skills-half-left.visible {
+    opacity: 1; Make the item visible
+    transform: translateX(0); Move to its original position
+} */
 
-.skills-half-right.visible {
-    opacity: 1; /* Make the item visible */
-    transform: translateX(0); /* Move to its original position */
-}
+/* .skills-half-right.visible {
+    opacity: 1; Make the item visible
+    transform: translateX(0); Move to its original position
+} */
 
 /* RESUME SECTION*/
 .resume-content {

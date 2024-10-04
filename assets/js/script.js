@@ -93,8 +93,8 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('.section-title'),
         document.querySelectorAll('#about .container p'),
         document.querySelectorAll('.resume-item'),
-        document.querySelectorAll('.skills-half-left'),
-        document.querySelectorAll('.skills-half-right'),
+        // document.querySelectorAll('.skills-half-left'),
+        // document.querySelectorAll('.skills-half-right'),
         document.querySelectorAll('.contact-wrap')
     ];
 
@@ -135,4 +135,61 @@ function downloadPDF() {
     link.href = 'https://alas4370.github.io/AJA2.github.io/assets/pdf/AJA_Resume.pdf'; // Replace with the actual path to your PDF file
     link.download = 'AJA_Resume.pdf'; // Replace with the desired file name for download
     link.click();
-  }
+}
+
+// Function to animate percentage value
+function animatePercentage(element, targetValue) {
+    let currentValue = 0;
+    const interval = setInterval(() => {
+        if (currentValue < targetValue) {
+            currentValue++;
+            element.innerHTML = currentValue + '%';
+        } else {
+            clearInterval(interval);
+        }
+    }, 20); // Speed of the percentage increment
+}
+
+// Function to animate progress bar
+function animateProgressBar(element) {
+    const targetValue = element.getAttribute('data-progress');
+    const duration = targetValue * 0.02; // Transition duration proportional to the value
+
+    // Reset progress bar for animation
+    element.style.transition = 'none'; // Disable transition for reset
+    element.style.width = '0'; // Set width to 0 for reset
+    // Force reflow (flush CSS changes to make sure reset is applied)
+    element.offsetHeight; // Trigger a reflow to apply the width = 0
+    setTimeout(() => {
+        // Enable smooth transition again and animate to the target width
+        element.style.transition = `width ${duration}s ease`;
+        element.style.width = targetValue + '%'; // Animate to the target width
+    }, 100); // Delay to ensure reset is visible
+}
+
+// Set up Intersection Observer
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // When the progress bar enters the center of the viewport
+            const progressBar = entry.target.querySelector('.progress-bar');
+            const percentage = entry.target.querySelector('.val');
+
+            // Reset the percentage value
+            percentage.innerHTML = '0%';
+
+            // Animate both the progress bar and the percentage value
+            const targetValue = parseInt(percentage.getAttribute('data-value'));
+            animatePercentage(percentage, targetValue);
+            animateProgressBar(progressBar);
+        }
+    });
+}, {
+    root: null, // Use the viewport as the root
+    threshold: 0.5 // Trigger when 50% of the element is in the viewport
+});
+
+// Observe all progress elements
+document.querySelectorAll('.progress').forEach(progress => {
+    observer.observe(progress);
+});
