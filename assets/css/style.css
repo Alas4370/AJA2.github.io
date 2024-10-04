@@ -541,7 +541,7 @@ footer {
 /* Media Queries for 1280 x 800 */
 @media (max-width: 1280px) {
     body {
-        padding: 0 20px; /* Increase body padding for larger screens */
+        padding: 0; /* Remove default padding */
     }
 
     h1 {
@@ -592,7 +592,7 @@ footer {
 /* Media Queries for 1024 x 600 */
 @media (max-width: 1024px) {
     body {
-        padding: 0 10px; /* Reduce body padding for smaller screens */
+        padding: 0; /* Remove default padding */
     }
 
     h1 {
@@ -643,7 +643,7 @@ footer {
 /* Media Queries for 853 x 1280 */
 @media (max-width: 853px) {
     body {
-        padding: 10px; /* Adjust body padding */
+        padding: 0; /* Remove default padding */
     }
 
     h1 {
@@ -707,7 +707,7 @@ footer {
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
     body {
-        padding: 0 10px; /* Reduce padding for smaller screens */
+        padding: 0; /* Remove default padding */
     }
 
     h1 {
