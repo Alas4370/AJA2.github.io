@@ -93,8 +93,6 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('.section-title'),
         document.querySelectorAll('#about .container p'),
         document.querySelectorAll('.resume-item'),
-        // document.querySelectorAll('.skills-half-left'),
-        // document.querySelectorAll('.skills-half-right'),
         document.querySelectorAll('.contact-wrap')
     ];
 

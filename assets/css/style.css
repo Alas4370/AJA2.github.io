@@ -370,39 +370,18 @@ header#hero p {
 
 /* Optional: Add background and padding to columns */
 .skills-half-left {
-    /* opacity: 0; Start with the item invisible
-    transform: translateX(-50px); Start position for the slide-in effect
-    transition: opacity 1s ease-out, transform 1s ease-out; Smooth transition for opacity and transform */
     flex: 0 0 50%; /* Each column takes 50% of the width */
     box-sizing: border-box; /* Ensure padding and border are included in the width */
     padding: 0 10px; /* Optional: Add some padding to the columns */
 }
 
 .skills-half-right {
-    /* opacity: 0; Start with the item invisible
-    transform: translateX(50px); Start position for the slide-in effect
-    transition: opacity 1s ease-out, transform 1s ease-out; Smooth transition for opacity and transform */
     flex: 0 0 50%; /* Each column takes 50% of the width */
     box-sizing: border-box; /* Ensure padding and border are included in the width */
     padding: 0 10px; /* Optional: Add some padding to the columns */
 }
 
-/* .skills-half-left.visible {
-    opacity: 1; Make the item visible
-    transform: translateX(0); Move to its original position
-} */
-
-/* .skills-half-right.visible {
-    opacity: 1; Make the item visible
-    transform: translateX(0); Move to its original position
-} */
-
 /* RESUME SECTION*/
-.resume-content {
-    padding-left: 100px;
-    padding-right: 100px;
-}
-
 .resume-title {
     display: block;
     font-size: 1.5em;
@@ -419,9 +398,8 @@ header#hero p {
     color: #f03801;
 }
 
-.resume-title-content {
-    padding-left: 200px;
-    padding-right: 100px;
+.resume-content, .resume-title-content {
+    padding: 0 50px;
 }
 
 .resume-item {
@@ -560,6 +538,172 @@ footer {
     text-align: center; /* Center text */
 }
 
+/* Media Queries for 1280 x 800 */
+@media (max-width: 1280px) {
+    body {
+        padding: 0 20px; /* Increase body padding for larger screens */
+    }
+
+    h1 {
+        font-size: 4rem; /* Increase heading size */
+    }
+
+    h2 {
+        font-size: 2rem; /* Increase subheading size */
+    }
+
+    section {
+        padding: 30px; /* Increase section padding */
+    }
+
+    .navbar-left h1 {
+        font-size: 1.5rem; /* Adjust navbar title size */
+    }
+
+    .navbar-center li a {
+        font-size: 1.2rem; /* Adjust menu item font size */
+    }
+
+    .btn {
+        padding: 10px 20px; /* Adjust button padding */
+    }
+
+    .about-content-image {
+        max-width: 100%; /* Ensure responsive scaling */
+    }
+
+    .about-content-info, .about-content-interest {
+        padding-top: 60px; /* Increase top padding */
+    }
+
+    .resume-content, .resume-title-content {
+        padding: 0 30px; /* Increase padding for resume section */
+    }
+
+    .contact-wrap {
+        padding: 30px; /* Increase padding for contact section */
+    }
+
+    footer {
+        padding: 30px; /* Increase padding for footer */
+    }
+}
+
+/* Media Queries for 1024 x 600 */
+@media (max-width: 1024px) {
+    body {
+        padding: 0 10px; /* Reduce body padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 3rem; /* Decrease heading size */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Decrease subheading size */
+    }
+
+    section {
+        padding: 20px; /* Reduce section padding */
+    }
+
+    .navbar-left h1 {
+        font-size: 1.2rem; /* Adjust navbar title size */
+    }
+
+    .navbar-center li a {
+        font-size: 1rem; /* Adjust menu item font size */
+    }
+
+    .btn {
+        padding: 8px 16px; /* Adjust button padding */
+    }
+
+    .about-content-image {
+        width: 30%; /* Make the image full width */
+    }
+
+    .about-content-info, .about-content-interest {
+        padding-top: 50px; /* Reduce top padding */
+    }
+
+    .resume-content, .resume-title-content {
+        padding: 0 20px; /* Reduce padding for resume section */
+    }
+
+    .contact-wrap {
+        padding: 20px; /* Reduce padding for contact section */
+    }
+
+    footer {
+        padding: 20px; /* Reduce padding for footer */
+    }
+}
+
+/* Media Queries for 853 x 1280 */
+@media (max-width: 853px) {
+    body {
+        padding: 10px; /* Adjust body padding */
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Adjust heading size */
+    }
+
+    h2 {
+        font-size: 1.8rem; /* Adjust subheading size */
+    }
+
+    section {
+        padding: 20px; /* Adjust section padding */
+    }
+
+    .navbar-left h1 {
+        font-size: 1.2rem; /* Adjust navbar title size */
+    }
+
+    .navbar-center li a {
+        font-size: 1rem; /* Adjust menu item font size */
+    }
+
+    .btn {
+        padding: 8px 15px; /* Adjust button padding */
+    }
+
+    .about-half {
+        flex: 0 0 100%;
+    }
+
+    .about-content-image {
+        width: 100%; /* Full width for images */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .about-content-interest a {
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+        margin-top: 5px;
+    }
+
+    .about-content-info, .about-content-interest {
+        padding-top: 30px; /* Adjust top padding */
+    }
+
+    .resume-content, .resume-title-content {
+        padding: 0 15px; /* Adjust padding for resume section */
+    }
+
+    .contact-wrap {
+        padding: 15px; /* Adjust padding for contact section */
+    }
+
+    footer {
+        padding: 15px; /* Adjust padding for footer */
+    }
+}
+
+
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
     body {
@@ -647,8 +791,8 @@ footer {
     }
     
     .about-content-info {
-        flex-direction: column;
-        flex-wrap: nowrap;
+        flex-direction: column ;
+        flex-wrap: wrap ;
         width: 100%;
     }
 
