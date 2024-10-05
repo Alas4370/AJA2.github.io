@@ -589,6 +589,69 @@ footer {
     }
 }
 
+@media (max-width: 1080px) {
+    body {
+        padding: 0; /* Remove unnecessary padding */
+    }
+
+    h1 {
+        font-size: 3rem; /* Adjust heading size for smaller screens */
+    }
+
+    h2 {
+        font-size: 1.8rem; /* Adjust subheading size */
+    }
+
+    section {
+        padding: 20px; /* Reduce padding for sections */
+    }
+
+    .navbar-left h1 {
+        font-size: 1.3rem; /* Smaller title size in the navbar */
+    }
+
+    .navbar-center li a {
+        font-size: 1rem; /* Decrease font size for menu items */
+    }
+
+    .navbar-right a {
+        font-size: 1.2rem; /* Adjust icon font size for right-aligned items */
+    }
+
+    .about-content-image {
+        width: 100%; /* Full width image */
+        height: auto; /* Adjust height automatically */
+    }
+
+    .about-content-details {
+        width: 100%; /* Full width for details section */
+    }
+
+    .about-content-info, .about-content-interest {
+        padding-top: 40px; /* Reduce top padding */
+    }
+
+    .btn {
+        padding: 8px 16px; /* Adjust button size for smaller screens */
+    }
+
+    .resume-content, .resume-title-content {
+        padding: 0 20px; /* Smaller padding for the resume section */
+    }
+
+    .resume-item {
+        padding-left: 30px; /* Adjust padding for resume items */
+    }
+
+    .contact-wrap {
+        padding: 20px; /* Adjust padding for contact section */
+    }
+
+    footer {
+        padding: 20px; /* Smaller padding for the footer */
+    }
+}
+
 /* Media Queries for 1024 x 600 */
 @media (max-width: 1024px) {
     body {
