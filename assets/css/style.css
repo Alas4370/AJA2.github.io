@@ -801,24 +801,24 @@ footer {
         flex-direction: column; /* Stack items vertically */
         width: 100%; /* Full width for dropdown */
         position: absolute; /* Position it absolutely */
-        left: 0;
-        background-color: rgba(51, 51, 51, 0.3); /* Semi-transparent background */
-        z-index: 100; /* Ensure it sits on top */
     }
 
     .navbar-center.show {
+        margin-top: 80px;
+    }
+
+    .navbar-center.show, 
+    .navbar-right.show{
         display: flex;
-        flex-direction: row; /* Stack items horizontally */
-        position:absolute; /* Position it absolutely */
+        flex-direction: row; /* Stack items horizontally */        
         justify-content: center;
+        position:absolute; /* Position it absolutely */
+        background-color: rgba(51, 51, 51, 0.1); /* Semi-transparent background */
+        backdrop-filter: blur(7px);
     }
 
     .navbar-right.show {
         margin-top: 137px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        position:absolute;
         float: right;
     }
 
